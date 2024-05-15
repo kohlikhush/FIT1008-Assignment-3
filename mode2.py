@@ -1,5 +1,5 @@
 from landsites import Land
-
+from typing import Union
 
 class Mode2Navigator:
     """
@@ -19,7 +19,7 @@ class Mode2Navigator:
         """
         raise NotImplementedError()
 
-    def simulate_day(self, adventurer_size: int) -> list[tuple[Land | None, int]]:
+    def simulate_day(self, adventurer_size: int) -> list[Union[tuple[Land, int], None]]:
         """
         Student-TODO: Best/Worst Case
         """
