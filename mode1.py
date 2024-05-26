@@ -18,6 +18,10 @@ class Mode1Navigator:
     def merge_sort(self, sites: list[Land]) -> list[Land]:
         """
         Sorts the list of land sites based on the ratio of guardians to reward using merge sort.
+        
+        Time Complexity: O(n log n)
+        - Splitting the list into halves takes O(log n) time.
+        - Merging the lists takes O(n) time.
         """
         if len(sites) <= 1:
             return sites
@@ -31,6 +35,9 @@ class Mode1Navigator:
     def merge(self, left: list[Land], right: list[Land]) -> list[Land]:
         """
         Merges two sorted lists of land sites into a single sorted list.
+        
+         Time Complexity: O(n)
+        - Each element from the left and right lists is processed exactly once.
         """
         merged = []
         left_index = right_index = 0
